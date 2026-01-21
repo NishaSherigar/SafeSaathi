@@ -1,0 +1,242 @@
+.incident-share-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fafafa;
+  min-height: 100vh;
+}
+
+.incident-share-container h1 {
+  color: #262626;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.incident-form-container {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid #dbdbdb;
+}
+
+.incident-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.8rem;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  background: #fafafa;
+}
+
+.form-group textarea {
+  min-height: 100px;
+  resize: none;
+}
+
+.submit-btn {
+  background: #0095f6;
+  color: black;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+  background: #0086e6;
+}
+
+.incidents-list {
+  margin-top: 2rem;
+}
+
+.incident-card {
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  border: 1px solid #dbdbdb;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.incident-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  background: #dbdbdb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #262626;
+}
+
+.incident-title {
+  font-weight: 600;
+  color: #262626;
+  font-size: 0.9rem;
+}
+
+.incident-content {
+  padding: 1rem;
+}
+
+.incident-description {
+  color: #262626;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.incident-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.incident-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  border-top: 1px solid #dbdbdb;
+}
+
+.action-button {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #262626;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.action-button:hover {
+  color: #0095f6;
+}
+
+.action-button i {
+  font-size: 1.2rem;
+}
+
+.incident-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  color: #8e8e8e;
+  font-size: 0.8rem;
+  border-top: 1px solid #dbdbdb;
+}
+
+.incident-date,
+.incident-location,
+.incident-time {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.file-upload {
+  margin: 1rem 0;
+}
+
+.file-label {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #fafafa;
+  border: 1px dashed #dbdbdb;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #262626;
+}
+
+.file-previews {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.file-preview {
+  position: relative;
+  background: #fafafa;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #dbdbdb;
+}
+
+.file-preview img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.remove-file {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #ed4956;
+  color: black;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.no-incidents {
+  text-align: center;
+  color: #8e8e8e;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  border: 1px solid #dbdbdb;
+}
+
+@media (max-width: 768px) {
+  .incident-share-container {
+    padding: 1rem;
+  }
+
+  .incident-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+} 

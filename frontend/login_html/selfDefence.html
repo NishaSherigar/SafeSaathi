@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Defense Guide | SafeSaathi</title>
+    <link rel="icon" href="./css/images/favicon (1).ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        :root {
+            --primary-purple: #6a00b3;
+            --dark-purple: #2e006b;
+            --light-purple: #9d4edd;
+            --electric-blue: #00b4d8;
+        }
+        
+        body {
+            background: linear-gradient(180deg, var(--dark-purple), #3b007a, var(--primary-purple), #3b007a, var(--dark-purple));
+            color: white;
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        /* Header Styles */
+        .page-header {
+            background: rgba(0, 0, 0, 0.7);
+            border-bottom: 2px solid var(--light-purple);
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(157,78,221,0.1) 0%, rgba(0,0,0,0) 70%);
+            z-index: -1;
+        }
+        
+        .page-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            background: linear-gradient(to right, #fff, var(--electric-blue));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 10px rgba(106,0,179,0.3);
+        }
+        
+        .page-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        /* Card Styles */
+        .defense-card {
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(157, 78, 221, 0.3);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .defense-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(106, 0, 179, 0.3);
+            border-color: var(--light-purple);
+        }
+        
+        .defense-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary-purple), var(--electric-blue));
+        }
+        
+        .card-img-container {
+            height: 250px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.4);
+            position: relative;
+        }
+        
+        .card-img-container img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+            padding: 15px;
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .card-title {
+            font-weight: 600;
+            color: var(--electric-blue);
+            margin-bottom: 1rem;
+        }
+        
+        .card-text {
+            margin-bottom: 0.8rem;
+            line-height: 1.6;
+        }
+        
+        /* Section Styles */
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin: 2rem 0 1.5rem;
+            color: white;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, var(--primary-purple), var(--electric-blue));
+        }
+        
+        /* Vulnerable Points Section */
+        .vulnerable-points {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid rgba(157, 78, 221, 0.2);
+        }
+        
+        .point-item {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .point-item::before {
+            content: '•';
+            color: var(--electric-blue);
+            font-size: 1.5rem;
+            position: absolute;
+            left: 0;
+            top: -3px;
+        }
+        
+        /* Button Styles */
+        .home-button {
+            background: linear-gradient(to right, var(--primary-purple), var(--light-purple));
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            border: none;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(106, 0, 179, 0.4);
+            margin: 2rem auto;
+        }
+        
+        .home-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(106, 0, 179, 0.6);
+            color: white;
+            text-decoration: none;
+        }
+        
+        .home-button i {
+            margin-right: 8px;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .card-img-container {
+                height: 200px;
+            }
+        }
+        
+        /* Gender-specific tips */
+        .gender-tip {
+            border-left: 4px solid;
+            padding-left: 15px;
+            margin: 1.5rem 0;
+        }
+        
+        .women-tip {
+            border-left-color: #ff6b6b;
+            background: rgba(255, 107, 107, 0.1);
+        }
+        
+        .men-tip {
+            border-left-color: #4cc9f0;
+            background: rgba(76, 201, 240, 0.1);
+        }
+        
+        .gender-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Page Header -->
+        <div class="page-header text-center">
+            <h1 class="page-title">Self Defense Techniques</h1>
+            <p class="page-subtitle">Essential skills for everyone - simple, effective moves regardless of your size or strength</p>
+        </div>
+        
+        <!-- Vulnerable Points Section -->
+        <div class="vulnerable-points">
+            <h2 class="section-title">Key Vulnerable Points</h2>
+            <p>Target these areas for maximum effect when defending yourself:</p>
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="point-item">Eyes - Even a light poke can cause significant pain and temporary blindness</div>
+                    <div class="point-item">Nose - A sharp strike can cause eyes to water and disorientation</div>
+                    <div class="point-item">Throat/Adam's Apple - Affects breathing and can cause gagging</div>
+                    <div class="point-item">Temples - One of the most sensitive areas of the head</div>
+                </div>
+                <div class="col-md-6">
+                    <div class="point-item">Groin - Extremely sensitive in both men and women</div>
+                    <div class="point-item">Knees - Vulnerable to kicks from any angle</div>
+                    <div class="point-item">Instep - Stomping on the foot can create an escape opportunity</div>
+                    <div class="point-item">Fingers - Easily broken when bent backwards</div>
+                </div>
+            </div>
+            
+            <div class="gender-tip women-tip">
+                <div class="gender-title">For Women:</div>
+                <p>Carry a personal alarm and learn to use everyday objects (keys, pens) as defensive tools. Focus on creating distance rather than overpowering an attacker.</p>
+            </div>
+            
+            <div class="gender-tip men-tip">
+                <div class="gender-title">For Men:</div>
+                <p>Be aware that most male attackers will expect groin attacks - have secondary targets ready. Use your generally greater upper body strength to control situations.</p>
+            </div>
+        </div>
+        
+        <!-- Basic Techniques -->
+        <h2 class="section-title text-center">Essential Defense Moves</h2>
+        
+        <div class="row mt-4">
+            <div class="col-md-4 mb-4">
+                <div class="defense-card">
+                    <div class="card-img-container">
+                        <img src="/images/11.jpg" alt="Finger defense technique">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Finger Control Technique</h5>
+                        <p class="card-text">Grab the little finger and ring finger with one hand, and the middle and index finger with the other. Bend the wrist forward sharply to force compliance.</p>
+                        <p class="card-text"><strong>Effectiveness:</strong> Works regardless of size difference when executed properly.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="defense-card">
+                    <div class="card-img-container">
+                        <img src="/images/one.jpg" alt="Throat strike">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Throat Strike</h5>
+                        <p class="card-text">A sharp strike to the throat (Adam's apple) can incapacitate an attacker temporarily. Use a knife-hand strike or stiff fingers.</p>
+                        <p class="card-text"><strong>Warning:</strong> This can be lethal if done with excessive force.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4 mb-4">
+                <div class="defense-card">
+                    <div class="card-img-container">
+                        <img src="/images/two.jpg" alt="Groin attack">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Groin Strike</h5>
+                        <p class="card-text">A knee or upward palm strike to the groin is extremely effective. Follow up immediately with additional strikes or escape.</p>
+                        <p class="card-text"><strong>Variation:</strong> A twisting grab can be more effective than a strike if you can't generate much force.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Common Attack Scenarios -->
+        <h2 class="section-title text-center">Defense Against Common Attacks</h2>
+        
+        <div class="row mt-4">
+            <div class="col-md-6 mb-4">
+                <div class="defense-card">
+                    <div class="card-img-container">
+                        <img src="/images/three.jpg" alt="Front grab defense">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Front Grab Defense</h5>
+                        <p class="card-text">1. Create space by bringing your hands forward and making fists at pelvis level</p>
+                        <p class="card-text">2. Headbutt to the nose or chin</p>
+                        <p class="card-text">3. Follow with knee to groin</p>
+                        <p class="card-text">4. Push away and create distance to escape</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mb-4">
+                <div class="defense-card">
+                    <div class="card-img-container">
+                        <img src="/images/4.jpg" alt="Palm strike defense">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Palm Strike Combo</h5>
+                        <p class="card-text">1. Straighten your left arm to create distance</p>
+                        <p class="card-text">2. Strike upward under the nose or chin with right palm</p>
+                        <p class="card-text">3. Immediate knee to groin</p>
+                        <p class="card-text">4. Push away while attacker is stunned</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="defense-card">
+                    <div class="card-img-container">
+                        <img src="/images/five.jpg" alt="Wrist release">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Wrist Release Technique</h5>
+                        <p class="card-text">The "rule of thumb": rotate your arm toward the attacker's thumb where their grip is weakest.</p>
+                        <p class="card-text">1. Rotate wrist toward thumb side</p>
+                        <p class="card-text">2. When arm is under attacker's, pull sharply</p>
+                        <p class="card-text">3. Immediately follow up with counterattack</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mb-4">
+                <div class="defense-card">
+                    <div class="card-img-container">
+                        <img src="/images/six.jpg" alt="Rear grab defense">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Rear Grab Defense</h5>
+                        <p class="card-text">1. Bend back to attempt headbutt (forces attacker to adjust stance)</p>
+                        <p class="card-text">2. Quickly bend down and grab one leg</p>
+                        <p class="card-text">3. Stand up sharply while pulling the leg</p>
+                        <p class="card-text">4. As attacker falls, escape or disable further</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Advanced Scenarios -->
+        <h2 class="section-title text-center">Advanced Defense Scenarios</h2>
+        
+        <div class="row mt-4">
+            <div class="col-md-6 mb-4">
+                <div class="defense-card">
+                    <div class="card-img-container">
+                        <img src="/images/seven.jpg" alt="Side attack defense">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Side Attack Defense</h5>
+                        <p class="card-text">Elbow strikes are devastating in close quarters:</p>
+                        <p class="card-text">1. Strike temple, jaw or nose with elbow</p>
+                        <p class="card-text">2. Follow with elbow to solar plexus or ribs</p>
+                        <p class="card-text">3. Use your free hand to control attacker's head/neck</p>
+                        <p class="card-text">4. Create distance and escape</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mb-4">
+                <div class="defense-card">
+                    <div class="card-img-container">
+                        <img src="/images/8.jpg" alt="Wall defense">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Wall/Pinned Defense</h5>
+                        <p class="card-text">When pushed against a wall:</p>
+                        <p class="card-text">1. If arms are up: strike armpit (very sensitive)</p>
+                        <p class="card-text">2. If one arm is free: strike throat, eyes, or groin</p>
+                        <p class="card-text">3. Headbutt: squat slightly then spring up to hit chin</p>
+                        <p class="card-text">4. Use wall to push off and create momentum</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Prevention Tips -->
+        <div class="vulnerable-points mt-5">
+            <h2 class="section-title">Prevention & Awareness</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Situational Awareness</h5>
+                    <ul class="pl-3">
+                        <li>Walk with confidence and purpose</li>
+                        <li>Keep headphones volume low in public</li>
+                        <li>Vary your routines regularly</li>
+                        <li>Trust your instincts - if something feels wrong, it probably is</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h5>Everyday Safety Tools</h5>
+                    <ul class="pl-3">
+                        <li>Keep keys between fingers as potential weapons</li>
+                        <li>Use your phone's emergency features</li>
+                        <li>Carry a loud personal alarm</li>
+                        <li>Learn basic self-defense moves (like those above)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Home Button -->
+        <div class="text-center">
+            <a href="http://localhost:5173/" class="home-button">
+                <i class="fas fa-home"></i> Back to Safety Portal
+            </a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

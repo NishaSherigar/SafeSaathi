@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SafeSathi - Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #3b008a, #8a2be2, #1e90ff);
+            color: black;
+        }
+        .frame {
+            background-color: black;
+            border-radius: 15px;
+            margin: 10px;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+        .frame:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+        }
+        .feature-btn {
+            background-color: #1e90ff;
+            color: black;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        .frame img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        .frame h3, .frame p {
+            color: black;
+        }
+        .row {
+            margin-bottom: 20px;
+        }
+        .col-md-6 {
+            padding: 10px;
+        }
+        /* New styles for the home button */
+        .home-button-container {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .home-button {
+            background: linear-gradient(45deg, #1e90ff, #8a2be2);
+            color: black;
+            padding: 12px 30px;
+            border-radius: 25px;
+            border: none;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .home-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            color: black;
+            text-decoration: none;
+        }
+        .home-button i {
+            margin-right: 8px;
+        }
+    </style>
+    <!-- Add Font Awesome for the home icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron text-center" style="background-color: black;">
+            <h2>Welcome to SafeSathi</h2>
+            <p>Your Safety, Our Priority</p>
+        </div>
+        
+        <!-- First Row -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="frame">
+                    <img src="./images/alterante.jpeg" alt="Alternate Route">
+                    <h3>Alternate Route</h3>
+                    <p>Find the safest alternate routes to your destination.</p>
+                    <button class="btn feature-btn">Explore</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="frame">
+                    <img src="./images/sos.avif" alt="SOS Alert">
+                    <h3>SOS Alert</h3>
+                    <p>Quickly send alerts to your emergency contacts.</p>
+                    <button class="btn feature-btn">Activate</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Row -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="frame">
+                    <img src="./images/voice.jpeg" alt="Voice Detection">
+                    <h3>Voice Detection</h3>
+                    <p>Detect threatening voices and alert authorities.</p>
+                    <button class="btn feature-btn">Monitor</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="frame">
+                    <img src="./images/cab.jpg" alt="Emergency Cab">
+                    <h3>Emergency Cab</h3>
+                    <p>Quickly book a cab in emergency situations.</p>
+                    <button class="btn feature-btn">Book Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Third Row -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="frame">
+                    <img src="./images/battery.jpeg" alt="Safety Plan">
+                    <h3>AI SAFETY PLAN</h3>
+                    <p>Smart safety, always by your side</p>
+                    <button class="btn feature-btn">Enable</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="frame">
+                    <img src="./images/online3.png" alt="Community Portal">
+                    <h3>Community Portal</h3>
+                    <p>Connect with your local safety community.</p>
+                    <button class="btn feature-btn">Join</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Home Button -->
+        <div class="home-button-container">
+            <a href="index.html" class="home-button">
+                <i class="fas fa-home"></i> Go to Home
+            </a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,219 @@
+:root {
+    --primary-purple: #6a00b3;
+    --dark-purple: #2e006b;
+    --light-purple: #9d4edd;
+    --electric-blue: #00b4d8;
+}
+
+.self-defence-container {
+    background: linear-gradient(180deg, var(--dark-purple), #3b007a, var(--primary-purple), #3b007a, var(--dark-purple));
+    color: white;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 2rem;
+}
+
+/* Header Styles */
+.page-header {
+    background: rgba(0, 0, 0, 0.7);
+    border-bottom: 2px solid var(--light-purple);
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(157,78,221,0.1) 0%, rgba(0,0,0,0) 70%);
+    z-index: -1;
+}
+
+.page-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #fff, var(--electric-blue));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 10px rgba(106,0,179,0.3);
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Card Styles */
+.defense-card {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(157, 78, 221, 0.3);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.defense-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(106, 0, 179, 0.3);
+    border-color: var(--light-purple);
+}
+
+.defense-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(to right, var(--primary-purple), var(--electric-blue));
+}
+
+.card-img-container {
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.card-img-container img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    padding: 15px;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-weight: 600;
+    color: var(--electric-blue);
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+/* Section Styles */
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 2rem 0 1.5rem;
+    color: white;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, var(--primary-purple), var(--electric-blue));
+}
+
+/* Vulnerable Points Section */
+.vulnerable-points {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 2rem 0;
+    border: 1px solid rgba(157, 78, 221, 0.2);
+}
+
+.point-item {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.point-item::before {
+    content: '•';
+    color: var(--electric-blue);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: -3px;
+}
+
+/* Button Styles */
+.home-button {
+    background: linear-gradient(to right, var(--primary-purple), var(--light-purple));
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(106, 0, 179, 0.4);
+    margin: 2rem auto;
+}
+
+.home-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(106, 0, 179, 0.6);
+    color: white;
+    text-decoration: none;
+}
+
+.home-button i {
+    margin-right: 8px;
+}
+
+/* Gender-specific tips */
+.gender-tip {
+    border-left: 4px solid;
+    padding-left: 15px;
+    margin: 1.5rem 0;
+}
+
+.women-tip {
+    border-left-color: #ff6b6b;
+    background: rgba(255, 107, 107, 0.1);
+}
+
+.men-tip {
+    border-left-color: #4cc9f0;
+    background: rgba(76, 201, 240, 0.1);
+}
+
+.gender-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+    }
+    
+    .card-img-container {
+        height: 200px;
+    }
+    
+    .self-defence-container {
+        padding: 1rem;
+    }
+} 

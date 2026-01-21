@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | SafeSaathi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        :root {
+            --deep-purple: #4b0082;
+            --royal-purple: #800080;
+            --light-purple: #9932cc;
+            --electric-blue: #1e90ff;
+            --violet: #8a2be2;
+            --dark-bg: #0f0c24;
+        }
+        
+        body {
+            background: linear-gradient(to bottom, var(--dark-bg), var(--deep-purple), var(--royal-purple), var(--deep-purple), var(--dark-bg));
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+        }
+        
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Glowing background elements */
+        .about-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(157,78,221,0.1) 0%, rgba(0,0,0,0) 70%);
+            z-index: -1;
+        }
+        
+        .page-header {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .page-header h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #fff, var(--electric-blue));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 15px rgba(106,0,179,0.5);
+        }
+        
+        .page-header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        /* About SafeSaathi section */
+        .about-safesaathi {
+            background: rgba(15, 12, 36, 0.7);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 50px;
+            border: 1px solid rgba(157, 78, 221, 0.3);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .about-safesaathi h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--electric-blue);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .about-safesaathi h2::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(to right, var(--light-purple), var(--electric-blue));
+        }
+        
+        .about-safesaathi p {
+            margin-bottom: 15px;
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+        
+        /* Team section */
+        .team-section {
+            margin-bottom: 50px;
+        }
+        
+        .team-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: white;
+            position: relative;
+        }
+        
+        .team-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(to right, var(--light-purple), var(--electric-blue));
+        }
+        
+        .team {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        
+        .member {
+            text-align: center;
+            width: 250px;
+            background: rgba(15, 12, 36, 0.7);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(157, 78, 221, 0.2);
+            backdrop-filter: blur(5px);
+        }
+        
+        .member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(106,0,179,0.4);
+            border-color: var(--light-purple);
+        }
+        
+        .member-img-container {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            border: 5px solid rgba(255,255,255,0.1);
+            padding: 5px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .member-img-container::before {
+            content: '';
+            position: absolute;
+            inset: -10px;
+            background: linear-gradient(45deg, var(--electric-blue), var(--light-purple));
+            z-index: -1;
+            border-radius: 50%;
+            animation: rotate 4s linear infinite;
+        }
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .member img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--dark-bg);
+        }
+        
+        .member h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 15px 0 5px;
+            color: white;
+        }
+        
+        .member p.role {
+            font-size: 1rem;
+            color: var(--electric-blue);
+            margin: 5px 0 15px;
+            font-weight: 500;
+        }
+        
+        .member p.description {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 15px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            color: white;
+            background: rgba(255,255,255,0.1);
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--electric-blue);
+            transform: translateY(-3px);
+        }
+        
+        /* Contact section */
+        .contact-section {
+            background: rgba(15, 12, 36, 0.7);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 50px;
+            border: 1px solid rgba(157, 78, 221, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        
+        .contact-section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: white;
+            position: relative;
+        }
+        
+        .contact-section h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(to right, var(--light-purple), var(--electric-blue));
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .contact-card {
+            flex: 1;
+            min-width: 250px;
+            background: rgba(30, 20, 60, 0.5);
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(157, 78, 221, 0.2);
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(106,0,179,0.3);
+            border-color: var(--light-purple);
+        }
+        
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--electric-blue);
+        }
+        
+        .contact-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        
+        .contact-card p, .contact-card a {
+            color: rgba(255,255,255,0.9);
+            line-height: 1.6;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .contact-card a:hover {
+            color: var(--electric-blue);
+        }
+        
+        /* Home Button */
+        .home-button-container {
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .home-button {
+            background: linear-gradient(45deg, var(--electric-blue), var(--violet));
+            color: white;
+            padding: 15px 35px;
+            border-radius: 30px;
+            border: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(30, 144, 255, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .home-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(138, 43, 226, 0.6);
+            color: white;
+        }
+        
+        .home-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .home-button:hover::before {
+            left: 100%;
+        }
+        
+        .home-button i {
+            margin-right: 10px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .page-header p {
+                font-size: 1rem;
+            }
+            
+            .member {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .contact-card {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="about-container">
+        <div class="page-header">
+            <h1>About SafeSaathi</h1>
+            <p>Empowering citizens with safety solutions through innovative technology and community collaboration</p>
+        </div>
+        
+        <div class="about-safesaathi">
+            <h2>Our Mission</h2>
+            <p>SafeSaathi was born out of a pressing need to address the growing concerns about personal safety in our communities. We believe that everyone deserves to feel secure in their daily lives, whether they're walking home at night, traveling to new places, or simply going about their routine.</p>
+            
+            <p>Our platform combines cutting-edge technology with community-powered safety features to create a comprehensive safety network. From real-time threat alerts to emergency response coordination, SafeSaathi puts the power of protection in your hands.</p>
+            
+            <h2 style="margin-top: 30px;">What We Offer</h2>
+            <p><strong>Real-time Safety Alerts:</strong> Get instant notifications about incidents in your vicinity.</p>
+            <p><strong>Community Watch:</strong> Connect with trusted neighbors and local safety volunteers.</p>
+            <p><strong>Emergency Response:</strong> One-tap access to authorities and emergency contacts.</p>
+            <p><strong>Safety Resources:</strong> Educational content and self-defense techniques for all citizens.</p>
+        </div>
+        
+        <div class="team-section">
+            <h2>Meet Our Team</h2>
+            <div class="team">
+                <div class="member">
+                    <div class="member-img-container">
+                        <img src="D:\Mini-final\SafeSaathi_(S+N)\SafeSaathi_(S+N)\SafeSaathi_shreya2\frontend\public\images\gargi1.jpeg" alt="Gargi Pungle">
+                    </div>
+                    <h3>Gargi Pungle</h3>
+                    <p class="role">Web Developer</p>
+                    <p class="description">Architect of SafeSaathi's robust web platform and security infrastructure</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="member">
+                    <div class="member-img-container">
+                        <img src="D:\Mini-final\SafeSaathi_(S+N)\SafeSaathi_(S+N)\SafeSaathi_shreya2\frontend\public\images\gargi1.jpeg" alt="Nisha Sherigar">
+                    </div>
+                    <h3>Nisha Sherigar</h3>
+                    <p class="role">Frontend Developer</p>
+                    <p class="description">Crafted the intuitive user interfaces that make safety accessible to everyone</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="member">
+                    <div class="member-img-container">
+                        <img src="D:\Mini-final\SafeSaathi_(S+N)\SafeSaathi_(S+N)\SafeSaathi_shreya2\frontend\public\images\gargi1.jpeg" alt="Farheen Sheikh">
+                    </div>
+                    <h3>Farheen Sheikh</h3>
+                    <p class="role">Backend Developer</p>
+                    <p class="description">Built the powerful systems that keep SafeSaathi running 24/7</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                
+                <div class="member">
+                    <div class="member-img-container">
+                        <img src="D:\Mini-final\SafeSaathi_(S+N)\SafeSaathi_(S+N)\SafeSaathi_shreya2\frontend\public\images\gargi1.jpeg" alt="Shreya Shirsat">
+                    </div>
+                    <h3>Shreya Shirsat</h3>
+                    <p class="role">UI/UX Designer</p>
+                    <p class="description">Designed the seamless experiences that make safety simple and intuitive</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact-section">
+            <h2>Contact Us</h2>
+            <p style="text-align: center; max-width: 700px; margin: 0 auto 30px;">We're here to help and answer any questions you might have about SafeSaathi. Reach out to us through any of these channels:</p>
+            
+            <div class="contact-info">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p>General Inquiries</p>
+                    <a href="mailto:info@safesaathi.com">info@safesaathi.com</a>
+                    <p>Support</p>
+                    <a href="mailto:support@safesaathi.com">support@safesaathi.com</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Phone</h3>
+                    <p>Customer Support</p>
+                    <a href="tel:+911234567890">+91 12345 67890</a>
+                    <p>Emergency (24/7)</p>
+                    <a href="tel:+9118001234567">1800 123 4567</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Office</h3>
+                    <p>SafeSaathi Headquarters</p>
+                    <p>123 Safety Plaza</p>
+                    <p>Mumbai, Maharashtra 400001</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="home-button-container">
+            <a href="index.html" class="home-button">
+                <i class="fas fa-home"></i> Back to Home
+            </a>
+        </div>
+    </div>
+</body>
+</html>

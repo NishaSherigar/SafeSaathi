@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SafeSathi - Contact</title>
+    <link rel="icon" href="./css/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+		body {
+			background: linear-gradient(135deg, #3b008a, #8a2be2, #1e90ff);
+			color: black;
+			min-height: 100vh;
+			padding-bottom: 30px;
+		}
+		.navbar, .jumbotron, .card {
+			background-color: rgba(0, 0, 0, 0.8);
+		}
+		/* Updated card styles */
+		.card {
+			margin-bottom: 30px;
+			height: auto; /* Changed from fixed height */
+			display: flex;
+			flex-direction: column;
+			transition: transform 0.3s ease;
+			border: none;
+			overflow: hidden;
+		}
+		.card:hover {
+			transform: translateY(-5px);
+			box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+		}
+		.card-img-top {
+			width: 100%;
+			height: 300px; /* Increased height */
+			object-fit: contain; /* Changed from cover to contain */
+			background-color: rgba(0, 0, 0, 0.4);
+			padding: 10px;
+		}
+		.card-body {
+			flex: 1;
+			padding: 1.5rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		.card-title {
+			font-size: 1.25rem;
+			margin-bottom: 1rem;
+			text-align: center;
+			color: black;
+		}
+		.card-text {
+			font-size: 1rem;
+			line-height: 1.5;
+			text-align: center;
+			color: black;
+		}
+		.jumbotron {
+			text-align: center;
+			padding: 2rem;
+			margin-bottom: 2rem;
+			background-color: rgba(0, 0, 0, 0.7);
+		}
+		/* Row spacing */
+		.row {
+			margin-bottom: 20px;
+		}
+		/* Home button styles */
+		.home-button-container {
+			text-align: center;
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+		.home-button {
+			background: linear-gradient(45deg, #1e90ff, #8a2be2);
+			color: black;
+			padding: 12px 30px;
+			border-radius: 25px;
+			border: none;
+			font-size: 18px;
+			font-weight: bold;
+			text-decoration: none;
+			display: inline-block;
+			transition: all 0.3s ease;
+			box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+		}
+		.home-button:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+			color: black;
+			text-decoration: none;
+		}
+		.home-button i {
+			margin-right: 8px;
+		}
+		/* Responsive adjustments */
+		@media (max-width: 768px) {
+			.card-img-top {
+				height: 250px;
+			}
+			.card {
+				margin-bottom: 20px;
+			}
+		}
+	</style>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h2>Safety Organizations for Men and Women in India</h2>
+            <p>Organizations and NGOs offering support for men and women who are victims of harassment, abuse, or other safety concerns.</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="./images/men.jpeg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Men's Helpline</h5>
+                        <p class="card-text">Contact: 8882 498 498<br>Email: help@mensrightindia.net</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="./images/1.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">National Commission for Women</h5>
+                        <p class="card-text">Contact: +91-11-26944880<br>Email: complaintcell-ncw@nic.in</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="./images/10.jpg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Aasra (Mental Health Support)</h5>
+                        <p class="card-text">Contact: +91-9820466726<br>Email: aasrahelpline@yahoo.com</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card">
+                    <img src="./images/men3.jpeg" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Men Welfare</h5>
+                        <p class="card-text">Contact: +91-9999888877<br>Email: info@menwelfare.org</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Home Button -->
+        <div class="home-button-container">
+            <a href="/" class="home-button">
+                <i class="fas fa-home"></i> Go to Home
+            </a>
+        </div>
+    </div>
+</body>
+</html>

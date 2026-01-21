@@ -1,0 +1,13 @@
+Feature,Importance
+Streetlights_encoded,0.30896590584795286
+Crime Reports Count,0.25339046404388293
+CCTV_encoded,0.21302133019894373
+Pedestrian_encoded,0.09532877439735084
+Road Condition Score,0.06921992389871898
+Police Stations Nearby (km),0.02423849189490291
+Slum_encoded,0.011091787561726666
+Longitude,0.007480146127452217
+Emergency Services Nearby (km),0.00513997171786647
+Distance from Borivali (km),0.0050743395339117
+Latitude,0.0050492476690684
+Traffic_encoded,0.001999617108222333
