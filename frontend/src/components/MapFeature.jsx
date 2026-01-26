@@ -12,7 +12,11 @@ const MapFeature = () => {
     useEffect(() => {
         // Load Google Maps script
         const script = document.createElement('script');
-        script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=places`;
+        const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || "";
+        if (!GOOGLE_MAPS_API_KEY) {
+            console.warn("Google Maps API key not configured. Please set VITE_GOOGLE_MAPS_API_KEY in your .env file");
+        }
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_API_KEY}&libraries=places`;
         script.async = true;
         script.defer = true;
         script.onload = initMap;

@@ -27,8 +27,12 @@ const SOSAlert = () => {
         sms: false
     });
 
-    // Replace with your actual Google Maps API key
-    const GOOGLE_MAPS_API_KEY = "AIzaSyCVNyLcK1zpOaRyuq3llW6s2zPVLsLmhQg";
+    // Get Google Maps API key from environment variable
+    const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || "";
+    
+    if (!GOOGLE_MAPS_API_KEY) {
+        console.warn("Google Maps API key not configured. Please set VITE_GOOGLE_MAPS_API_KEY in your .env file");
+    }
 
     const mapContainerStyle = {
         width: '100%',

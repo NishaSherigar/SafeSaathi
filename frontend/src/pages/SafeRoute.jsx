@@ -3,8 +3,12 @@ import React, { useEffect } from "react";
 const SafeRoute = () => {
   useEffect(() => {
     const script = document.createElement("script");
+    const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY || "";
+    if (!GOOGLE_MAPS_API_KEY) {
+      console.warn("Google Maps API key not configured. Please set VITE_GOOGLE_MAPS_API_KEY in your .env file");
+    }
     script.src =
-      "https://maps.googleapis.com/maps/api/js?key=AIzaSyCVNyLcK1zpOaRyuq3llW6s2zPVLsLmhQg&libraries=places&callback=initMap";
+      `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_API_KEY}&libraries=places&callback=initMap`;
     script.async = true;
     script.defer = true;
 
