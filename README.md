@@ -263,13 +263,6 @@ SafeSaathi provides recommendations based on available data. Users should:
 
 **Your safety is our priority. Travel wisely! 🛡️**
 
----
-
-*Last Updated: January 2026*
-*Version: 1.0.0*
-
-
-
 ## 📽️ Demo Video
 
 📽️ **Demo Video:**
