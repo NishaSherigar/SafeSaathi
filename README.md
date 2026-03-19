@@ -14,23 +14,6 @@ SafeSaathi is a comprehensive web platform designed to enhance personal safety t
 
 ---
 
-# 🛡️ Safe Saathi – Safety Assistance Web Application
-
-Safe Saathi is a safety-focused web application designed to help users during emergency situations. The system provides real-time safety assistance using a modern frontend and a Python backend.
-
-
-
-## ✨ Key Features
-
-* Emergency SOS alert mechanism
-* Safety-oriented user interface
-* Real-time frontend–backend interaction
-* Responsive design for mobile and desktop
-* Scalable backend architecture
-
-
-
-
 ## 🛠️ Tech Stack
 
 ### Frontend
