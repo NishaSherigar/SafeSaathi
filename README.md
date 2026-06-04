@@ -1,6 +1,6 @@
 # 🛡️ SafeSaathi - AI-Powered Safety Route Planner
 
-SafeSaathi is a comprehensive web platform designed to enhance personal safety through intelligent route planning. It uses machine learning to identify the safest paths, provides real-time safety analytics, emergency features, and community-driven incident reporting.
+SafeSaathi is a web-based safety platform designed as a prototype for intelligent route analysis and personal safety support. It uses ML-based logic to evaluate route safety using environmental risk factors and provides safety scoring for navigation decisions. The system also includes simulated emergency alert workflows, geolocation-based features, and a conceptual community incident reporting module for enhanced user awareness.
 
 ## ✨ Key Features
 
